@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Split California King Beds: A Complete Research Report — Prepared for John Gaskins</title>
+<style>
+  @page {
+    size: Letter;
+    margin: 0.75in;
+    @bottom-center {
+      content: "Page " counter(page) " of " counter(pages) "  •  Prepared for John Gaskins";
+      font-size: 9pt;
+      color: #6b6b6b;
+      font-family: Georgia, serif;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #1f2937;
+    line-height: 1.55;
+    background: #fff;
+  }
+  .container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 24px 28px 60px 28px;
+  }
+
+  /* ----- Cover ----- */
+  .cover {
+    background: linear-gradient(135deg, #0b3d91 0%, #1e5fb8 60%, #3b82f6 100%);
+    color: #fff;
+    padding: 56px 44px;
+    border-radius: 14px;
+    margin-bottom: 28px;
+    page-break-after: always;
+  }
+  .cover .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 11pt;
+    opacity: 0.85;
+    margin-bottom: 14px;
+  }
+  .cover h1 {
+    font-size: 34pt;
+    line-height: 1.15;
+    margin: 0 0 16px 0;
+    font-weight: 700;
+  }
+  .cover .subtitle {
+    font-size: 14pt;
+    opacity: 0.92;
+    margin-bottom: 28px;
+    font-style: italic;
+  }
+  .cover .meta {
+    border-top: 1px solid rgba(255,255,255,0.35);
+    padding-top: 18px;
+    font-size: 11pt;
+  }
+  .cover .meta strong { display: inline-block; min-width: 110px; opacity: 0.85; font-weight: normal; }
+
+  /* ----- Headings ----- */
+  h2 {
+    font-size: 20pt;
+    color: #0b3d91;
+    border-bottom: 3px solid #0b3d91;
+    padding-bottom: 6px;
+    margin-top: 38px;
+    margin-bottom: 14px;
+    page-break-after: avoid;
+  }
+  h3 {
+    font-size: 14pt;
+    color: #1e5fb8;
+    margin-top: 22px;
+    margin-bottom: 8px;
+    page-break-after: avoid;
+  }
+  h4 {
+    font-size: 12pt;
+    color: #1f2937;
+    margin: 14px 0 6px 0;
+  }
+  p { margin: 8px 0; font-size: 11pt; }
+
+  /* ----- Layout components ----- */
+  .lead {
+    background: #f0f6ff;
+    border-left: 5px solid #1e5fb8;
+    padding: 14px 18px;
+    margin: 16px 0 22px 0;
+    font-size: 11.5pt;
+  }
+  .callout {
+    background: #fffbeb;
+    border: 1px solid #fcd34d;
+    border-left: 5px solid #f59e0b;
+    padding: 12px 16px;
+    margin: 14px 0;
+    border-radius: 4px;
+    font-size: 10.5pt;
+  }
+  .callout .label {
+    font-weight: bold;
+    color: #92400e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 9pt;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .recommendation {
+    background: #ecfdf5;
+    border: 1px solid #6ee7b7;
+    border-left: 5px solid #059669;
+    padding: 14px 18px;
+    margin: 16px 0;
+    border-radius: 4px;
+  }
+  .recommendation .label {
+    font-weight: bold;
+    color: #065f46;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 9pt;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  /* ----- Tables ----- */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 10pt;
+  }
+  th {
+    background: #0b3d91;
+    color: #fff;
+    text-align: left;
+    padding: 9px 10px;
+    font-weight: bold;
+  }
+  td {
+    border: 1px solid #d1d5db;
+    padding: 8px 10px;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #f9fafb; }
+
+  /* ----- Product cards ----- */
+  .product {
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 14px 0;
+    background: #fff;
+    page-break-inside: avoid;
+  }
+  .product-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+  }
+  .product-head h4 {
+    margin: 0;
+    color: #0b3d91;
+    font-size: 13pt;
+  }
+  .price-tag {
+    background: #059669;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 10pt;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  .stars {
+    color: #f59e0b;
+    font-size: 11pt;
+    letter-spacing: 1px;
+  }
+  .product .meta-row {
+    font-size: 9.5pt;
+    color: #6b7280;
+    margin-bottom: 8px;
+  }
+  .product ul { margin: 6px 0 6px 18px; padding: 0; }
+  .product li { font-size: 10pt; margin-bottom: 3px; }
+  .product a {
+    color: #1e5fb8;
+    text-decoration: none;
+    font-weight: bold;
+    word-break: break-all;
+  }
+  .product a:hover { text-decoration: underline; }
+
+  /* ----- Step list ----- */
+  .steps {
+    counter-reset: step-counter;
+    list-style: none;
+    padding: 0;
+    margin: 14px 0;
+  }
+  .steps li {
+    counter-increment: step-counter;
+    position: relative;
+    padding: 10px 12px 10px 52px;
+    margin-bottom: 8px;
+    background: #f9fafb;
+    border-left: 4px solid #1e5fb8;
+    font-size: 11pt;
+    border-radius: 0 4px 4px 0;
+  }
+  .steps li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #0b3d91;
+    color: #fff;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+  }
+
+  /* ----- Charts ----- */
+  .chart-wrap {
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 18px 0;
+    background: #fafafa;
+    page-break-inside: avoid;
+  }
+  .chart-title {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #0b3d91;
+    margin-bottom: 6px;
+    text-align: center;
+  }
+  .chart-sub {
+    font-size: 9pt;
+    color: #6b7280;
+    text-align: center;
+    margin-bottom: 14px;
+    font-style: italic;
+  }
+
+  /* ----- Image ----- */
+  .figure {
+    text-align: center;
+    margin: 16px 0;
+    page-break-inside: avoid;
+  }
+  .figure img {
+    max-width: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+  }
+  .figure .caption {
+    font-size: 9.5pt;
+    color: #6b7280;
+    font-style: italic;
+    margin-top: 6px;
+  }
+
+  .toc {
+    background: #f9fafb;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 18px 24px;
+    margin-bottom: 26px;
+  }
+  .toc h2 {
+    margin-top: 0;
+    border: none;
+    color: #0b3d91;
+    font-size: 16pt;
+  }
+  .toc ol { margin: 0 0 0 20px; padding: 0; }
+  .toc li {
+    font-size: 11pt;
+    margin-bottom: 5px;
+    padding-left: 4px;
+  }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 14px 0;
+  }
+  .col-card {
+    background: #f9fafb;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 12px 14px;
+  }
+  .col-card h4 {
+    margin-top: 0;
+    color: #0b3d91;
+  }
+
+  .footer-note {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid #d1d5db;
+    font-size: 9pt;
+    color: #6b7280;
+    font-style: italic;
+  }
+  .pageb { page-break-before: always; }
+
+  /* Download button — only shown in browser, hidden when printing/PDF-export */
+  .download-bar {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.35);
+    text-align: left;
+  }
+  .download-btn {
+    display: inline-block;
+    background: #fff;
+    color: #0b3d91;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 11pt;
+    font-family: Georgia, serif;
+    transition: transform 0.15s ease;
+  }
+  .download-btn:hover {
+    transform: translateY(-1px);
+    background: #f0f6ff;
+  }
+  .download-btn::before { content: "⬇  "; }
+  @media print { .download-bar { display: none; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ============= COVER ============= -->
+  <div class="cover">
+    <div class="eyebrow">Personalized Sleep Research Report</div>
+    <h1>The Split California King Bed</h1>
+    <div class="subtitle">A complete buyer's guide — brands, mattresses, headboard mounting, sheets, and tailored recommendations.</div>
+    <div class="meta">
+      <p><strong>Prepared for:</strong> John Gaskins</p>
+      <p><strong>Date:</strong> April 30, 2026</p>
+      <p><strong>Topic:</strong> Split California King Beds — Brands, Mattresses, Headboards, Sheets &amp; Recommendations</p>
+      <p><strong>Format:</strong> Webpage (HTML) + Printable Report (PDF)</p>
+    </div>
+    <div class="download-bar">
+      <a class="download-btn" href="split_cal_king_report.pdf" download>Download the printable PDF report (17 pages)</a>
+    </div>
+  </div>
+
+  <!-- ============= TOC ============= -->
+  <div class="toc">
+    <h2>What's Inside</h2>
+    <ol>
+      <li>Quick primer — What a split California king actually is</li>
+      <li>Best brands for split California king beds &amp; bases</li>
+      <li>How to attach a headboard to a split Cal king setup</li>
+      <li>What kind of mattress you need (and why)</li>
+      <li>Top-rated mattresses — prices, links &amp; reviews</li>
+      <li>Fitted sheets &amp; bedding — what works, what doesn't</li>
+      <li>Side-by-side comparisons &amp; visual charts</li>
+      <li>Final recommendations for John</li>
+      <li>Sources used in this research</li>
+    </ol>
+  </div>
+
+  <!-- ============= SECTION 1 ============= -->
+  <h2>1. Quick Primer — What a Split California King Actually Is</h2>
+  <p class="lead">
+    A <strong>split California king</strong> is a bed system made of <strong>two separate mattresses, each 36" wide × 84" long</strong>, placed side-by-side on a split adjustable base. Together they create the same 72" × 84" footprint as a regular California king — but each side moves independently. That's the entire point: you can raise your head to read while your partner sleeps flat, and you can each pick a different firmness without compromise.
+  </p>
+
+  <h3>Don't confuse it with a "split king"</h3>
+  <p>This trips a lot of buyers up. The two are <em>not</em> the same:</p>
+  <table>
+    <thead>
+      <tr><th style="width:25%">Size</th><th>Two-piece dimensions</th><th>Total footprint</th><th>Best for</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Split King</strong></td><td>Two Twin XL: 38" × 80" each</td><td>76" × 80"</td><td>Couples under ~6'2" — wider, more standard sheets</td></tr>
+      <tr><td><strong>Split California King</strong></td><td>Two halves: 36" × 84" each</td><td>72" × 84"</td><td>Tall sleepers (6'2"+), narrow rooms, couples who want the extra 4" length</td></tr>
+      <tr><td><strong>Flex-Top California King</strong></td><td>One mattress, split only at top ~30"</td><td>72" × 84"</td><td>Couples who want independent head articulation but a single sleeping surface (no center gap)</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <span class="label">Heads up</span>
+    Split California king is a <strong>niche size</strong>. Only a handful of brands make true split Cal king mattresses — Saatva and Tempur-Pedic are the two heavyweights. Bedding selection is also more limited than standard sizes, so factor sheets into your decision <em>before</em> you commit.
+  </div>
+
+  <!-- ============= SECTION 2 ============= -->
+  <h2>2. Best Brands for Split California King Beds &amp; Adjustable Bases</h2>
+  <p>Because a split Cal king only makes sense on a dual adjustable base, the "bed" really has two parts: the <strong>mattress brand</strong> and the <strong>adjustable base brand</strong>. Here are the brands that consistently get top marks across <em>NCOA, Sleep Foundation, Mattress Clarity, Consumer Reports, Tom's Guide,</em> and <em>U.S. News</em>.</p>
+
+  <h3>Top mattress brands offering true Split Cal King</h3>
+  <table>
+    <thead>
+      <tr><th>Brand</th><th>Standout model</th><th>Why it makes the list</th><th>Trial / Warranty</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Saatva</strong></td><td>Solaire &amp; Classic 11.5"</td><td>One of the only U.S. brands that explicitly sells a split Cal king. Solaire offers 50 firmness settings per side.</td><td>365-night trial / Lifetime</td></tr>
+      <tr><td><strong>Tempur-Pedic</strong></td><td>ProAdapt, LuxeAdapt, LuxeBreeze (all in split Cal king)</td><td>Industry-leading memory foam; pairs with the Ergo Smart Base for snore detection &amp; sleep tracking.</td><td>90-night trial / 10-year</td></tr>
+      <tr><td><strong>Brooklyn Bedding</strong></td><td>Aurora Luxe (hybrid)</td><td>One of the few mid-priced hybrids offered in split Cal king; cools well and supports back sleepers.</td><td>120-night trial / 10-year</td></tr>
+      <tr><td><strong>WinkBed</strong></td><td>WinkBed Plus</td><td>Built for sleepers over 230 lbs; strong edge support reduces the "split feel" in the middle.</td><td>120-night trial / Lifetime</td></tr>
+      <tr><td><strong>Sleep Number</strong></td><td>FlexFit / 360 Smart Bed</td><td>Air-chamber technology with per-side firmness; closest competitor to Saatva Solaire.</td><td>100-night trial / 15-year limited</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Top adjustable base brands compatible with split Cal king</h3>
+  <table>
+    <thead>
+      <tr><th>Brand</th><th>Model</th><th>Approx. price (split Cal king)</th><th>Standout feature</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Saatva</td><td>Adjustable Base Plus (Split Cal King)</td><td>~$1,499 per side / ~$2,998 total</td><td>Wall-hugger tech, full massage, zero-gravity preset</td></tr>
+      <tr><td>Tempur-Pedic</td><td>Ergo Smart Base / Ergo Extend</td><td>~$2,499 per side</td><td>App control, snore detection, sleep tracking</td></tr>
+      <tr><td>Beautyrest</td><td>BlackICE</td><td>$799–$1,299 per side</td><td>USB ports, under-bed lighting, zero-gravity</td></tr>
+      <tr><td>Nectar</td><td>Adjustable Frame</td><td>~$599 per side</td><td>Best budget pick; wireless remote, zero-gravity</td></tr>
+      <tr><td>Ergomotion</td><td>Ascend / Dawn House</td><td>$1,200–$2,000 per side</td><td>Quiet motors, wide compatibility with most mattresses</td></tr>
+    </tbody>
+  </table>
+
+  <div class="recommendation">
+    <span class="label">My take</span>
+    For a no-regret combo, <strong>Saatva Solaire mattresses + Saatva Adjustable Base Plus</strong> is the cleanest split Cal king setup on the market. Both halves come from one brand, so the heights match perfectly and the bases are explicitly engineered for the mattress. If budget is tight, swap the Saatva base for a <strong>Nectar Adjustable Frame</strong> and save roughly $1,800.
+  </div>
+
+  <!-- ============= SECTION 3 ============= -->
+  <h2>3. How to Attach a Headboard to a Split Cal King Setup</h2>
+  <p class="lead">
+    There are <strong>three viable approaches</strong>: bolt-on brackets to the adjustable bases, a freestanding "captured" headboard inside an existing bed frame, or a wall-mounted floating headboard. Each has trade-offs.
+  </p>
+
+  <h3>Option A — Bolt-on brackets (most common)</h3>
+  <p>Most modern adjustable bases (Saatva, Tempur-Pedic, Nectar, GhostBed) ship with — or have an add-on kit for — universal headboard brackets. Because a split Cal king has <em>two</em> bases, you'll need <strong>two bracket kits</strong> (one per base) and a headboard wide enough to span both.</p>
+
+  <ol class="steps">
+    <li><strong>Confirm your bases have headboard mounting holes or pre-installed brackets.</strong> Look on the side rails near the head — most have either a "T" bracket or pre-drilled mounting holes. If not, order a universal headboard bracket kit (~$30–$60).</li>
+    <li><strong>Buy a king-sized headboard, not Cal king.</strong> A standard king headboard (78"–80" wide) covers the 72" combined width of two split Cal king bases with a bit of overhang on each side, which looks better than a too-narrow Cal king headboard.</li>
+    <li><strong>Raise the head of both bases</strong> to make working underneath easier, and clear the area.</li>
+    <li><strong>Bolt the bracket channels to each base frame.</strong> Tighten with a ½" wrench or socket. Repeat on the second base.</li>
+    <li><strong>Attach the bracket flange to the headboard</strong> (or slide hook-on style). Keep the headboard <strong>1½" to 2" away from the mattress edge</strong> — this clearance is critical so the mattress doesn't rub the headboard when the base articulates.</li>
+    <li><strong>Test articulate the bases up and down</strong> a few times. The mattress should slide cleanly past the headboard with no catching.</li>
+  </ol>
+
+  <h3>Option B — Captured inside an existing bed frame</h3>
+  <p>If you already have a king or California king bed frame with a headboard, footboard, and side rails, you can just <em>set the two adjustable bases inside it</em>. No bracket installation needed. The frame's interior dimensions need to match the king or Cal king size of your bases. Make sure to use a <strong>zero-clearance adjustable base</strong> if the frame doesn't have much vertical room.</p>
+
+  <h3>Option C — Wall-mounted (floating) headboard</h3>
+  <p>The cleanest modern look. The headboard mounts to the wall studs behind the bed, completely independent of the bases. This means it doesn't move when the bases articulate, which some people prefer. Use a stud finder, a level, and heavy-duty wall anchors. Center it on the 72" combined width of the two bases.</p>
+
+  <div class="callout">
+    <span class="label">Pro tip for split bases</span>
+    Many couples skip the brackets entirely and use a freestanding upholstered headboard pinned between the bed and the wall. This works great with split bases because there's nothing to align — the bed simply pushes the headboard against the wall.
+  </div>
+
+  <!-- ============= SECTION 4 ============= -->
+  <h2>4. What Kind of Mattress You Need</h2>
+  <p>Not all mattresses bend. Split Cal king is <em>built around</em> a dual adjustable base, so the mattress has to articulate without damaging itself. Here's what to look for and what to avoid.</p>
+
+  <div class="two-col">
+    <div class="col-card">
+      <h4>✓ Mattress types that work</h4>
+      <ul>
+        <li><strong>All-foam (memory foam, polyfoam)</strong> — flexes easily, no internal damage</li>
+        <li><strong>Latex</strong> — naturally flexible, very durable on adjustable bases</li>
+        <li><strong>Foam-or-latex hybrids</strong> — coils designed to flex with adjustable bases (most modern hybrids qualify)</li>
+        <li><strong>Air-chamber (e.g., Saatva Solaire, Sleep Number)</strong> — specifically engineered for adjustable use</li>
+      </ul>
+    </div>
+    <div class="col-card">
+      <h4>✗ Mattress types to avoid</h4>
+      <ul>
+        <li><strong>Traditional innerspring with rigid coils</strong> — bending voids the warranty on many models</li>
+        <li><strong>Mattresses over 13–14" thick</strong> — get harder to bend and trap heat when articulated</li>
+        <li><strong>Pillow-top "no-flip" beds</strong> not explicitly rated for adjustable bases</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Firmness &amp; sleep position guidance</h3>
+  <table>
+    <thead>
+      <tr><th>Sleep position</th><th>Recommended firmness (1–10 scale)</th><th>Why</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Side sleeper</td><td>4 – 6 (medium / medium-soft)</td><td>Lets shoulder &amp; hip sink in for spinal alignment</td></tr>
+      <tr><td>Back sleeper</td><td>6 – 7 (medium-firm)</td><td>Supports the lumbar curve without sagging</td></tr>
+      <tr><td>Stomach sleeper</td><td>7 – 8 (firm)</td><td>Prevents hips from sinking and arching the lower back</td></tr>
+      <tr><td>Combination sleeper</td><td>5 – 7</td><td>Balanced feel; latex or hybrid responds best</td></tr>
+      <tr><td>Sleeper over 230 lbs</td><td>7 – 8 with reinforced coils</td><td>Prevents premature sag &amp; supports edges</td></tr>
+    </tbody>
+  </table>
+
+  <p>Because a split Cal king lets each side be different, John, you and your partner can each pick the firmness that suits your body — that's the whole superpower of this format.</p>
+
+  <!-- ============= SECTION 5 ============= -->
+  <h2>5. Top-Rated Split Cal King Mattresses to Buy</h2>
+  <p class="lead">
+    Five mattresses that are explicitly available in split Cal king (or as two halves of a 36" × 84" pair). Prices below are for the <strong>full split Cal king set</strong> (both halves) before any sale discounts.
+  </p>
+
+  <!-- Product 1 -->
+  <div class="product">
+    <div class="product-head">
+      <h4>1. Saatva Solaire — Best Overall (Adjustable Firmness)</h4>
+      <span class="price-tag">~$5,990 split Cal king</span>
+    </div>
+    <div class="meta-row">
+      <span class="stars">★★★★★</span> &nbsp;|&nbsp; Air-chamber adjustable mattress &nbsp;|&nbsp; 13" tall &nbsp;|&nbsp; 365-night trial &nbsp;|&nbsp; Lifetime warranty
+    </div>
+    <p><strong>Why it's #1 for split Cal king:</strong> Solaire offers 50 firmness settings per side via remote — so you and your partner can each fine-tune your half on any given night. It's purpose-built to pair with Saatva's Adjustable Base Plus Split Cal King.</p>
+    <ul>
+      <li><strong>Pros:</strong> Truly individualized firmness; excellent edge support; cooling latex top layer; lifetime warranty.</li>
+      <li><strong>Cons:</strong> Premium price; pairs <em>only</em> with Saatva's matching split base; can feel firmer than expected at higher settings.</li>
+      <li><strong>Reviews summary:</strong> Mattress Nut, NCOA, and Mattress Clarity all rank it #1 for split adjustable setups in 2026. 96% Saatva customer satisfaction (BBB A+).</li>
+    </ul>
+    <p><strong>Buy direct:</strong> <a href="https://www.saatva.com/mattresses/solaire">https://www.saatva.com/mattresses/solaire</a></p>
+  </div>
+
+  <!-- Product 2 -->
+  <div class="product">
+    <div class="product-head">
+      <h4>2. Saatva Classic 11.5" — Best Innerspring Hybrid</h4>
+      <span class="price-tag">~$4,190 split Cal king</span>
+    </div>
+    <div class="meta-row">
+      <span class="stars">★★★★★</span> &nbsp;|&nbsp; Innerspring hybrid &nbsp;|&nbsp; 11.5" only (the 14.5" version is NOT adjustable-base compatible) &nbsp;|&nbsp; 365-night trial &nbsp;|&nbsp; Lifetime warranty
+    </div>
+    <p><strong>Why it stands out:</strong> Saatva's flagship and the highest-rated mattress for most sleepers per Tom's Guide and U.S. News in 2026. The 11.5" version is the only Classic that fits an adjustable base. Comes in <em>Plush Soft, Luxury Firm,</em> and <em>Firm</em> — pick a different firmness for each half.</p>
+    <ul>
+      <li><strong>Pros:</strong> Coil-on-coil for durability; Lumbar Zone® for back support; 3" Euro pillow top; A+ BBB rating.</li>
+      <li><strong>Cons:</strong> Only the 11.5" version works adjustable; less motion isolation than memory foam.</li>
+      <li><strong>Reviews summary:</strong> Mattress Clarity rates the Luxury Firm 4.6/5; Tom's Guide calls it the best mattress for most sleepers.</li>
+    </ul>
+    <p><strong>Buy direct:</strong> <a href="https://www.saatva.com/mattresses/saatva-classic">https://www.saatva.com/mattresses/saatva-classic</a></p>
+  </div>
+
+  <!-- Product 3 -->
+  <div class="product">
+    <div class="product-head">
+      <h4>3. Tempur-Pedic ProAdapt 12" — Best Memory Foam</h4>
+      <span class="price-tag">~$5,398 split Cal king</span>
+    </div>
+    <div class="meta-row">
+      <span class="stars">★★★★½</span> &nbsp;|&nbsp; Memory foam &nbsp;|&nbsp; 12" tall &nbsp;|&nbsp; 90-night trial &nbsp;|&nbsp; 10-year warranty
+    </div>
+    <p><strong>Why it stands out:</strong> Tempur-Pedic's flagship memory foam in split Cal king. NASA-derived TEMPUR® material delivers up to 2× the pressure relief of standard foam. Sold in <em>Medium</em> and <em>Firm</em> — mix and match per side.</p>
+    <ul>
+      <li><strong>Pros:</strong> Best-in-class motion isolation; SmartClimate Dual Cover stays cool; pairs with the Ergo Smart Base for snore-detection.</li>
+      <li><strong>Cons:</strong> Pricey; classic memory-foam "hug" feel isn't for everyone; only 90-night trial vs. 365 from Saatva.</li>
+      <li><strong>Reviews summary:</strong> #1 in Customer Satisfaction with Retail Mattresses (J.D. Power); strong owner reviews on Tempurpedic.com and Amazon.</li>
+    </ul>
+    <p><strong>Buy direct:</strong> <a href="https://www.tempurpedic.com/shop-mattresses/all-split-cal-king/">https://www.tempurpedic.com/shop-mattresses/all-split-cal-king/</a></p>
+    <p><strong>Amazon:</strong> <a href="https://www.amazon.com/Tempur-Pedic-TEMPUR-ProAdapt-Mattress-California-Warranty/dp/B07DDZB5SF">amazon.com/dp/B07DDZB5SF</a></p>
+  </div>
+
+  <!-- Product 4 -->
+  <div class="product">
+    <div class="product-head">
+      <h4>4. Tempur-Pedic LuxeBreeze 13" — Best for Hot Sleepers</h4>
+      <span class="price-tag">~$8,798 split Cal king</span>
+    </div>
+    <div class="meta-row">
+      <span class="stars">★★★★½</span> &nbsp;|&nbsp; Memory foam with cooling tech &nbsp;|&nbsp; 13" tall &nbsp;|&nbsp; 90-night trial &nbsp;|&nbsp; 10-year warranty
+    </div>
+    <p><strong>Why it stands out:</strong> The LuxeBreeze cover and PureCool+ phase-change material keep the surface up to 10° cooler all night. If either of you runs hot, this is the model.</p>
+    <ul>
+      <li><strong>Pros:</strong> Superior cooling; most pressure relief in the Tempur lineup; available in Soft and Firm.</li>
+      <li><strong>Cons:</strong> Most expensive option on this list; heavy mattresses can be tough to set up.</li>
+      <li><strong>Reviews summary:</strong> Tempur-Pedic's most awarded collection; widely cited by Sleep Foundation and Tom's Guide.</li>
+    </ul>
+    <p><strong>Buy direct:</strong> <a href="https://www.tempurpedic.com/shop-mattresses/all-split-cal-king/">tempurpedic.com — split Cal king</a></p>
+  </div>
+
+  <!-- Product 5 -->
+  <div class="product">
+    <div class="product-head">
+      <h4>5. Brooklyn Bedding Aurora Luxe — Best Hybrid Value</h4>
+      <span class="price-tag">~$3,200 split Cal king</span>
+    </div>
+    <div class="meta-row">
+      <span class="stars">★★★★</span> &nbsp;|&nbsp; Cooling hybrid &nbsp;|&nbsp; 13.5" tall &nbsp;|&nbsp; 120-night trial &nbsp;|&nbsp; 10-year warranty
+    </div>
+    <p><strong>Why it stands out:</strong> One of the few mid-priced hybrids that ships in true split Cal king. Cooling foam plus pocketed coils, in Soft / Medium / Firm.</p>
+    <ul>
+      <li><strong>Pros:</strong> Strong cooling features; great pressure relief for side sleepers over 130 lbs; budget-friendly relative to the others on this list.</li>
+      <li><strong>Cons:</strong> Less supportive for stomach sleepers and heavier sleepers (over 230 lbs); shorter trial period than Saatva.</li>
+      <li><strong>Reviews summary:</strong> Mattress Clarity's top hybrid pick for couples; high marks on cooling tests.</li>
+    </ul>
+    <p><strong>Buy direct:</strong> <a href="https://brooklynbedding.com/products/aurora-luxe-cooling">https://brooklynbedding.com/products/aurora-luxe-cooling</a></p>
+  </div>
+
+  <!-- ============= SECTION 6 ============= -->
+  <h2>6. Fitted Sheets &amp; Bedding — What Actually Works</h2>
+  <p class="lead">
+    Sheets are the trickiest part of owning a split Cal king. Standard Cal king sheets <strong>do not fit</strong>. You have a few options, and which you pick depends on whether your two halves are independent (true split) or share a foot section (flex-top).
+  </p>
+
+  <h3>The three sheet styles to know</h3>
+  <table>
+    <thead>
+      <tr><th>Style</th><th>How it fits</th><th>Best for</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Two Twin XL-Long fitted sheets (each 36" × 84")</strong></td><td>One per mattress half, no center connection</td><td>True split Cal king (the Saatva / Tempur-Pedic split Cal king setup) — easiest to wash; eliminates sheet-stealing</td></tr>
+      <tr><td><strong>Flex-top / Split-head fitted sheet</strong></td><td>One unified bottom, split only at the top ~30"</td><td>Sleep Number FlexTop California King and similar single-mattress flex-top beds</td></tr>
+      <tr><td><strong>Single Cal king fitted sheet</strong> (over both halves)</td><td>One sheet stretched over both mattresses</td><td>Couples who prefer the look of one bed but lose some independent articulation; sheet binds when bases tilt apart</td></tr>
+    </tbody>
+  </table>
+
+  <h3>How to actually put them on</h3>
+  <ol class="steps">
+    <li><strong>Identify your style.</strong> If you have two physically separate mattresses, you need two Twin XL-Long fitted sheets (note: regular Twin XL is 80" — for split Cal king you need 84" length). If you have a flex-top, get a flex-top fitted sheet sized for Cal king.</li>
+    <li><strong>Look for deep pockets — 16" minimum.</strong> Modern mattresses with toppers are often 14"–18" thick. Sheets with shallow 12" pockets pop off when the base articulates.</li>
+    <li><strong>Anchor with sheet straps or a "cinch-fit" elastic system.</strong> This is the single biggest tip for adjustable beds. Brands like CinchFit and QuickZip make sheets with continuous elastic that survives nightly head-raising without popping off.</li>
+    <li><strong>Use split top sheets.</strong> Two separate top sheets — one per side — let each of you pick a different weight and prevent the cover-stealing battle. Common in Scandinavian-style bedding.</li>
+    <li><strong>Skip the comforter, use two duvets.</strong> The Scandinavian method: each person has their own duvet. Permanently solves cover-stealing and works perfectly with a split base.</li>
+  </ol>
+
+  <h3>Best fitted sheet brands (by category)</h3>
+  <table>
+    <thead>
+      <tr><th>Brand</th><th>Material</th><th>Approx. price (split Cal king set)</th><th>Notable</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>DreamFit</strong></td><td>100% Pima cotton sateen</td><td>$200 – $260</td><td>Recommended by Sleep Number; 16.5" deep pockets, elastic straps</td></tr>
+      <tr><td><strong>Saatva Organic Sateen 300TC</strong></td><td>Organic cotton</td><td>~$255</td><td>The only set Consumer Reports recommends for Saatva flex-top; matches the Solaire</td></tr>
+      <tr><td><strong>QuickZip</strong></td><td>Percale or sateen cotton</td><td>$170 – $230</td><td>Zip-off top, base stays on the bed — easiest sheet changes on the market</td></tr>
+      <tr><td><strong>CinchFit</strong></td><td>600TC cotton, USA-made</td><td>$180 – $250</td><td>Stay-on elastic system designed specifically for adjustable beds</td></tr>
+      <tr><td><strong>PureCare</strong></td><td>Hypoallergenic / cooling</td><td>$150 – $200</td><td>Best for allergy sufferers and hot sleepers</td></tr>
+      <tr><td><strong>Royal Tradition</strong></td><td>Pure cotton, 300–608 TC</td><td>$70 – $150</td><td>Best budget; flex-top Cal king specialist</td></tr>
+      <tr><td><strong>Mellanni / Pacific Coast</strong></td><td>Microfiber / cotton blends</td><td>$50 – $100</td><td>Affordable basics in split Cal king sizing</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>Where to buy:</strong></p>
+  <ul>
+    <li>Saatva sheets: <a href="https://www.saatva.com">saatva.com</a></li>
+    <li>DreamFit / PureCare / CinchFit: <a href="https://www.hardtofindsheets.com">hardtofindsheets.com</a></li>
+    <li>QuickZip: <a href="https://quickzip.com">quickzip.com</a></li>
+    <li>CinchFit / Quahog Bay specialty sheets: <a href="https://quahogbaybedding.com">quahogbaybedding.com</a></li>
+    <li>Wholesale Beddings (flex-top specialist): <a href="https://www.wholesalebeddings.com">wholesalebeddings.com</a></li>
+  </ul>
+
+  <!-- ============= SECTION 7: CHARTS ============= -->
+  <h2>7. Side-by-Side Comparison Charts</h2>
+
+  <!-- Chart 1: Mattress Pricing -->
+  <div class="chart-wrap">
+    <div class="chart-title">Chart 1 — Split Cal King Mattress Pricing (Both Halves Combined, MSRP)</div>
+    <div class="chart-sub">Brooklyn Bedding Aurora Luxe is the value pick; Tempur LuxeBreeze sits at the top of the range.</div>
+    <svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:auto;">
+      <!-- axes -->
+      <line x1="180" y1="20" x2="180" y2="270" stroke="#9ca3af" stroke-width="1"/>
+      <line x1="180" y1="270" x2="680" y2="270" stroke="#9ca3af" stroke-width="1"/>
+      <!-- gridlines & labels -->
+      <line x1="180" y1="20"  x2="680" y2="20"  stroke="#e5e7eb" stroke-dasharray="3,3"/>
+      <line x1="180" y1="70"  x2="680" y2="70"  stroke="#e5e7eb" stroke-dasharray="3,3"/>
+      <line x1="180" y1="120" x2="680" y2="120" stroke="#e5e7eb" stroke-dasharray="3,3"/>
+      <line x1="180" y1="170" x2="680" y2="170" stroke="#e5e7eb" stroke-dasharray="3,3"/>
+      <line x1="180" y1="220" x2="680" y2="220" stroke="#e5e7eb" stroke-dasharray="3,3"/>
+      <text x="170" y="25"  text-anchor="end" font-size="10" fill="#374151">$10,000</text>
+      <text x="170" y="75"  text-anchor="end" font-size="10" fill="#374151">$8,000</text>
+      <text x="170" y="125" text-anchor="end" font-size="10" fill="#374151">$6,000</text>
+      <text x="170" y="175" text-anchor="end" font-size="10" fill="#374151">$4,000</text>
+      <text x="170" y="225" text-anchor="end" font-size="10" fill="#374151">$2,000</text>
+      <text x="170" y="275" text-anchor="end" font-size="10" fill="#374151">$0</text>
+
+      <!-- Bars: scale = 25px per $1000, so $4190 -> 4190/40 = 105 px high -->
+      <!-- Brooklyn Bedding Aurora Luxe ~$3,200 -> 80px -->
+      <rect x="220" y="190" width="60" height="80" fill="#10b981"/>
+      <text x="250" y="285" text-anchor="middle" font-size="9" fill="#374151">Brooklyn</text>
+      <text x="250" y="297" text-anchor="middle" font-size="9" fill="#374151">Aurora Luxe</text>
+      <text x="250" y="185" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#065f46">$3,200</text>
+      <!-- Saatva Classic ~$4,190 -> 105px -->
+      <rect x="310" y="165" width="60" height="105" fill="#1e5fb8"/>
+      <text x="340" y="285" text-anchor="middle" font-size="9" fill="#374151">Saatva</text>
+      <text x="340" y="297" text-anchor="middle" font-size="9" fill="#374151">Classic 11.5"</text>
+      <text x="340" y="160" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#0b3d91">$4,190</text>
+      <!-- Tempur ProAdapt ~$5,398 -> 135px -->
+      <rect x="400" y="135" width="60" height="135" fill="#1e5fb8"/>
+      <text x="430" y="285" text-anchor="middle" font-size="9" fill="#374151">Tempur</text>
+      <text x="430" y="297" text-anchor="middle" font-size="9" fill="#374151">ProAdapt 12"</text>
+      <text x="430" y="130" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#0b3d91">$5,398</text>
+      <!-- Saatva Solaire ~$5,990 -> 150px -->
+      <rect x="490" y="120" width="60" height="150" fill="#0b3d91"/>
+      <text x="520" y="285" text-anchor="middle" font-size="9" fill="#374151">Saatva</text>
+      <text x="520" y="297" text-anchor="middle" font-size="9" fill="#374151">Solaire</text>
+      <text x="520" y="115" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#0b3d91">$5,990</text>
+      <!-- Tempur LuxeBreeze ~$8,798 -> 220px -->
+      <rect x="580" y="50" width="60" height="220" fill="#dc2626"/>
+      <text x="610" y="285" text-anchor="middle" font-size="9" fill="#374151">Tempur</text>
+      <text x="610" y="297" text-anchor="middle" font-size="9" fill="#374151">LuxeBreeze</text>
+      <text x="610" y="45" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#991b1b">$8,798</text>
+
+      <!-- Title -->
+      <text x="430" y="15" text-anchor="middle" font-size="11" font-weight="bold" fill="#1f2937">Approximate MSRP — Split Cal King Set</text>
+    </svg>
+  </div>
+
+  <!-- Chart 2: Trial / Warranty Comparison -->
+  <div class="chart-wrap">
+    <div class="chart-title">Chart 2 — Sleep Trial Length (Days)</div>
+    <div class="chart-sub">Saatva's 365-night trial is the most generous in this lineup by a wide margin.</div>
+    <svg viewBox="0 0 700 240" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:auto;">
+      <line x1="180" y1="20" x2="180" y2="200" stroke="#9ca3af" stroke-width="1"/>
+      <line x1="180" y1="200" x2="680" y2="200" stroke="#9ca3af" stroke-width="1"/>
+      <!-- 365 max, scale: 365 -> 175 px wide -->
+      <!-- Saatva (both): 365 nights -->
+      <text x="175" y="50" text-anchor="end" font-size="10" fill="#374151">Saatva (both)</text>
+      <rect x="180" y="36" width="500" height="22" fill="#0b3d91"/>
+      <text x="690" y="51" font-size="10" font-weight="bold" fill="#0b3d91">365 nights</text>
+      <!-- Brooklyn Bedding: 120 nights -->
+      <text x="175" y="90" text-anchor="end" font-size="10" fill="#374151">Brooklyn Aurora Luxe</text>
+      <rect x="180" y="76" width="164" height="22" fill="#10b981"/>
+      <text x="354" y="91" font-size="10" font-weight="bold" fill="#065f46">120 nights</text>
+      <!-- WinkBed: 120 nights -->
+      <text x="175" y="130" text-anchor="end" font-size="10" fill="#374151">WinkBed Plus</text>
+      <rect x="180" y="116" width="164" height="22" fill="#10b981"/>
+      <text x="354" y="131" font-size="10" font-weight="bold" fill="#065f46">120 nights</text>
+      <!-- Sleep Number: 100 nights -->
+      <text x="175" y="170" text-anchor="end" font-size="10" fill="#374151">Sleep Number</text>
+      <rect x="180" y="156" width="137" height="22" fill="#f59e0b"/>
+      <text x="327" y="171" font-size="10" font-weight="bold" fill="#92400e">100 nights</text>
+      <!-- Tempur (both): 90 nights -->
+      <text x="175" y="210" text-anchor="end" font-size="10" fill="#374151">Tempur-Pedic</text>
+      <rect x="180" y="196" width="123" height="22" fill="#dc2626"/>
+      <text x="313" y="211" font-size="10" font-weight="bold" fill="#991b1b">90 nights</text>
+    </svg>
+  </div>
+
+  <!-- Chart 3: Size comparison diagram -->
+  <div class="chart-wrap">
+    <div class="chart-title">Chart 3 — Mattress Size Visual Comparison</div>
+    <div class="chart-sub">Why split Cal king matters: same footprint as Cal king, but two independent halves.</div>
+    <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:auto;">
+      <!-- Standard King: 76 x 80 -->
+      <text x="80" y="20" font-size="11" font-weight="bold" fill="#0b3d91">Standard King · 76" × 80"</text>
+      <rect x="20" y="30" width="152" height="80" fill="#dbeafe" stroke="#1e5fb8" stroke-width="2"/>
+      <line x1="86" y1="30" x2="86" y2="110" stroke="#94a3b8" stroke-dasharray="3,3"/>
+      <text x="50" y="75" font-size="10" fill="#374151">TXL 38" × 80"</text>
+      <text x="98" y="75" font-size="10" fill="#374151">TXL 38" × 80"</text>
+
+      <!-- California King: 72 x 84 -->
+      <text x="280" y="20" font-size="11" font-weight="bold" fill="#0b3d91">California King · 72" × 84"</text>
+      <rect x="240" y="30" width="144" height="84" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+      <text x="280" y="75" font-size="10" fill="#374151">Single mattress</text>
+      <text x="288" y="92" font-size="10" fill="#374151">72" × 84"</text>
+
+      <!-- SPLIT California King: 72 x 84, two halves -->
+      <text x="500" y="20" font-size="11" font-weight="bold" fill="#dc2626">Split California King · 72" × 84"</text>
+      <rect x="460" y="30" width="144" height="84" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+      <line x1="532" y1="30" x2="532" y2="114" stroke="#991b1b" stroke-width="2"/>
+      <text x="475" y="65" font-size="9" fill="#374151">36" × 84"</text>
+      <text x="475" y="80" font-size="9" fill="#374151">independent</text>
+      <text x="540" y="65" font-size="9" fill="#374151">36" × 84"</text>
+      <text x="540" y="80" font-size="9" fill="#374151">independent</text>
+
+      <!-- Note arrows -->
+      <line x1="532" y1="114" x2="532" y2="140" stroke="#991b1b" stroke-width="1"/>
+      <text x="380" y="155" text-anchor="middle" font-size="10" font-style="italic" fill="#374151">Same total footprint as Cal king, but each side flexes independently on the adjustable base.</text>
+
+      <!-- Length comparison -->
+      <text x="20" y="190" font-size="11" font-weight="bold" fill="#1f2937">Length comparison (head-to-foot):</text>
+      <line x1="20" y1="210" x2="20" y2="218" stroke="#374151"/>
+      <line x1="20" y1="214" x2="160" y2="214" stroke="#1e5fb8" stroke-width="3"/>
+      <line x1="160" y1="210" x2="160" y2="218" stroke="#374151"/>
+      <text x="170" y="218" font-size="10" fill="#1e5fb8" font-weight="bold">King: 80"</text>
+
+      <line x1="20" y1="240" x2="20" y2="248" stroke="#374151"/>
+      <line x1="20" y1="244" x2="167" y2="244" stroke="#dc2626" stroke-width="3"/>
+      <line x1="167" y1="240" x2="167" y2="248" stroke="#374151"/>
+      <text x="177" y="248" font-size="10" fill="#dc2626" font-weight="bold">Cal King &amp; Split Cal King: 84" (4" longer)</text>
+
+      <text x="20" y="272" font-size="9.5" font-style="italic" fill="#6b7280">Cal king and Split Cal king share the same length — ideal for sleepers 6'2" and taller.</text>
+    </svg>
+  </div>
+
+  <!-- Chart 4: Decision flowchart -->
+  <div class="chart-wrap">
+    <div class="chart-title">Chart 4 — Quick Decision Flow: Which Setup Is Right?</div>
+    <div class="chart-sub">Use this if you're still deciding between split Cal king vs. other configurations.</div>
+    <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:auto;">
+      <!-- Start -->
+      <ellipse cx="350" cy="25" rx="120" ry="18" fill="#0b3d91"/>
+      <text x="350" y="30" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">Start: Sharing the bed?</text>
+      <line x1="350" y1="43" x2="350" y2="65" stroke="#374151" stroke-width="1.5"/>
+
+      <!-- Q1 -->
+      <rect x="220" y="65" width="260" height="36" rx="6" fill="#dbeafe" stroke="#1e5fb8"/>
+      <text x="350" y="80" text-anchor="middle" font-size="11" font-weight="bold" fill="#0b3d91">Different sleep needs from partner?</text>
+      <text x="350" y="93" text-anchor="middle" font-size="9" fill="#374151">(snoring, firmness, articulation)</text>
+      <line x1="350" y1="101" x2="350" y2="125" stroke="#374151" stroke-width="1.5"/>
+
+      <!-- Q1 No branch -->
+      <line x1="350" y1="83" x2="640" y2="83" stroke="#9ca3af" stroke-dasharray="3,3"/>
+      <line x1="640" y1="83" x2="640" y2="180" stroke="#9ca3af" stroke-dasharray="3,3"/>
+      <text x="495" y="78" text-anchor="middle" font-size="9" fill="#6b7280" font-style="italic">No</text>
+      <rect x="540" y="180" width="140" height="50" rx="6" fill="#f3f4f6" stroke="#9ca3af"/>
+      <text x="610" y="200" text-anchor="middle" font-size="10" fill="#374151">→ Standard king or</text>
+      <text x="610" y="214" text-anchor="middle" font-size="10" font-weight="bold" fill="#374151">Cal king (single)</text>
+
+      <text x="358" y="115" font-size="9" fill="#374151">Yes</text>
+      <!-- Q2 Are sleepers tall (6'2"+) -->
+      <rect x="220" y="125" width="260" height="36" rx="6" fill="#dbeafe" stroke="#1e5fb8"/>
+      <text x="350" y="140" text-anchor="middle" font-size="11" font-weight="bold" fill="#0b3d91">Either sleeper 6'2" or taller?</text>
+      <text x="350" y="153" text-anchor="middle" font-size="9" fill="#374151">(or want extra foot room?)</text>
+
+      <!-- Branch Yes -> Split Cal king -->
+      <line x1="280" y1="161" x2="180" y2="220" stroke="#059669" stroke-width="1.5"/>
+      <text x="200" y="195" font-size="9" fill="#059669" font-weight="bold">YES</text>
+      <rect x="40" y="220" width="280" height="60" rx="8" fill="#10b981"/>
+      <text x="180" y="244" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">→ SPLIT CALIFORNIA KING</text>
+      <text x="180" y="262" text-anchor="middle" font-size="10" fill="#ecfdf5">72" × 84" footprint, two 36"-wide halves,</text>
+      <text x="180" y="274" text-anchor="middle" font-size="10" fill="#ecfdf5">independent adjustable articulation</text>
+
+      <!-- Branch No -> Split King -->
+      <line x1="420" y1="161" x2="500" y2="220" stroke="#1e5fb8" stroke-width="1.5"/>
+      <text x="475" y="195" font-size="9" fill="#1e5fb8" font-weight="bold">NO</text>
+      <rect x="380" y="220" width="280" height="60" rx="8" fill="#1e5fb8"/>
+      <text x="520" y="244" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">→ SPLIT KING</text>
+      <text x="520" y="262" text-anchor="middle" font-size="10" fill="#dbeafe">76" × 80" footprint, two Twin XL halves,</text>
+      <text x="520" y="274" text-anchor="middle" font-size="10" fill="#dbeafe">wider sheet selection &amp; lower cost</text>
+
+      <!-- bottom note -->
+      <text x="350" y="320" text-anchor="middle" font-size="10" fill="#374151" font-style="italic">Want independent head movement but a single seamless mattress?</text>
+      <text x="350" y="336" text-anchor="middle" font-size="10" fill="#374151" font-style="italic">→ Consider a Flex-Top California King (e.g., Sleep Number 360 or Saatva Upper-Flex)</text>
+      <text x="350" y="365" text-anchor="middle" font-size="9" fill="#6b7280">Note: Flex-top is one mattress with a split only at the top ~30" — different from split Cal king.</text>
+    </svg>
+  </div>
+
+  <!-- ============= SECTION 8: RECOMMENDATIONS ============= -->
+  <h2 class="pageb">8. Final Recommendations for John</h2>
+
+  <p class="lead">
+    Based on this research, here are three concrete bundles tailored to common scenarios. Pick the one that matches your priorities and you'll have a complete, working split Cal king setup.
+  </p>
+
+  <div class="recommendation">
+    <span class="label">★ Best Overall — "Set it and forget it"</span>
+    <h3 style="margin-top:4px;">The Saatva Bundle</h3>
+    <p style="margin:6px 0;"><strong>Mattress:</strong> 2× Saatva Solaire (split Cal king pair) — pick your firmness setting independently. <strong>~$5,990</strong></p>
+    <p style="margin:6px 0;"><strong>Base:</strong> Saatva Adjustable Base Plus (Split Cal King) — wall-hugger, massage, zero-gravity. <strong>~$2,998</strong></p>
+    <p style="margin:6px 0;"><strong>Sheets:</strong> Saatva Organic Sateen 300TC split Cal king set. <strong>~$255</strong></p>
+    <p style="margin:6px 0;"><strong>Headboard:</strong> Pick any king-sized upholstered headboard with a universal bracket kit (~$30) and bolt to both bases.</p>
+    <p style="margin:8px 0 0 0;"><strong>Total: ~$9,275 + headboard.</strong> 365-night trial, lifetime warranty, free white-glove delivery, single-vendor compatibility. This is the lowest-friction premium build.</p>
+  </div>
+
+  <div class="recommendation" style="background:#eff6ff; border-color:#93c5fd; border-left-color:#1e5fb8;">
+    <span class="label" style="color:#1e3a8a;">$ Best Value — "Premium feel without flagship pricing"</span>
+    <h3 style="margin-top:4px;">The Hybrid Value Bundle</h3>
+    <p style="margin:6px 0;"><strong>Mattress:</strong> 2× Brooklyn Bedding Aurora Luxe (split Cal king) — different firmness per side. <strong>~$3,200</strong></p>
+    <p style="margin:6px 0;"><strong>Base:</strong> Nectar Adjustable Frame ×2 (Cal king split). <strong>~$1,200</strong></p>
+    <p style="margin:6px 0;"><strong>Sheets:</strong> CinchFit 600TC cotton split Cal king with stay-on elastic. <strong>~$200</strong></p>
+    <p style="margin:6px 0;"><strong>Headboard:</strong> Wall-mounted floating headboard — eliminates bracket compatibility issues. <strong>~$200</strong></p>
+    <p style="margin:8px 0 0 0;"><strong>Total: ~$4,800.</strong> Saves you nearly $4,500 versus the Saatva bundle while still hitting all the must-haves: independent firmness, independent articulation, hot-sleeper-friendly cooling.</p>
+  </div>
+
+  <div class="recommendation" style="background:#fdf4ff; border-color:#e9d5ff; border-left-color:#7c3aed;">
+    <span class="label" style="color:#5b21b6;">♨ Best for Hot Sleepers / Tech Lovers</span>
+    <h3 style="margin-top:4px;">The Tempur-Pedic Smart Bundle</h3>
+    <p style="margin:6px 0;"><strong>Mattress:</strong> 2× Tempur-Pedic LuxeBreeze 13" (split Cal king pair). <strong>~$8,798</strong></p>
+    <p style="margin:6px 0;"><strong>Base:</strong> Tempur-Pedic Ergo Smart Base (split Cal king) — app control, snore detection, sleep tracking. <strong>~$4,998</strong></p>
+    <p style="margin:6px 0;"><strong>Sheets:</strong> Tempur-Pedic Pima cotton split Cal king set. <strong>~$300</strong></p>
+    <p style="margin:6px 0;"><strong>Headboard:</strong> Captured-frame setup with an existing king bed frame, OR universal brackets.</p>
+    <p style="margin:8px 0 0 0;"><strong>Total: ~$14,100 + headboard.</strong> The most premium build; aggressive cooling, the best motion isolation, and integrated sleep analytics. Worth it if either of you runs hot or you want the snore-detection feature.</p>
+  </div>
+
+  <h3>John's quick-check shopping checklist</h3>
+  <ul>
+    <li>☐ Confirm bedroom can fit 72" wide × 84" long, plus 2–3 feet of clearance for nightstands and articulation.</li>
+    <li>☐ Confirm doorways and stairs can accommodate two 36" × 84" mattresses (split Cal king's main delivery advantage).</li>
+    <li>☐ Decide on a firmness for each side <em>before</em> ordering — Saatva, Tempur-Pedic, and Brooklyn Bedding all let you mix.</li>
+    <li>☐ Order <strong>two</strong> bracket kits if attaching a headboard to two separate bases.</li>
+    <li>☐ Buy fitted sheets with at least 16" deep pockets — adjustable bases pull sheets tight when articulating.</li>
+    <li>☐ Take advantage of the longest trial available (Saatva's 365-night trial gives the most safety margin).</li>
+    <li>☐ Check for Memorial Day, July 4th, Labor Day, and Black Friday sales — most brands run 20–30% discounts on these holidays.</li>
+  </ul>
+
+  <!-- ============= SECTION 9: SOURCES ============= -->
+  <h2>9. Sources Used in This Research</h2>
+  <p>All data, prices, and quotes in this report were drawn from these sources, accessed in April 2026:</p>
+  <ul style="font-size:10pt;">
+    <li><strong>Saatva</strong> — official product pages: <a href="https://www.saatva.com/mattresses?sizes=split+cal+king">saatva.com/mattresses (Split Cal King)</a>, <a href="https://www.saatva.com/mattresses/solaire">Solaire</a>, <a href="https://www.saatva.com/mattresses/saatva-classic">Classic</a></li>
+    <li><strong>Tempur-Pedic</strong> — <a href="https://www.tempurpedic.com/shop-mattresses/all-split-cal-king/">Split Cal King mattresses</a>, <a href="https://www.tempurpedic.com/split-king/">Why Switch to Split King</a></li>
+    <li><strong>Mattress Nut</strong> — <a href="https://www.mattressnut.com/split-california-king-guide/">Split California King Guide</a>, <a href="https://www.mattressnut.com/best-split-king-adjustable-bed/">Best Split King Adjustable Beds 2026</a></li>
+    <li><strong>Mattress Clarity</strong> — <a href="https://www.mattressclarity.com/reviews/best-split-kings/">Best Split King Mattresses 2026</a>, <a href="https://www.mattressclarity.com/reviews/saatva/">Saatva Mattress Review</a></li>
+    <li><strong>NCOA (National Council on Aging)</strong> — <a href="https://www.ncoa.org/product-resources/sleep/best-split-king-adjustable-beds/">Best Split King Adjustable Beds 2026</a></li>
+    <li><strong>Sleep Foundation</strong> — <a href="https://www.sleepfoundation.org/best-adjustable-bed/best-split-king-adjustable-bed">Best Split King Adjustable Bed 2026</a></li>
+    <li><strong>Consumer Reports</strong> — <a href="https://www.consumerreports.org/home-garden/adjustable-bed-frames/best-adjustable-bed-frames-a1355049403/">Best Adjustable Bed Frames 2026</a></li>
+    <li><strong>Tom's Guide</strong> — <a href="https://www.tomsguide.com/reviews/saatva-classic-mattress">Saatva Classic Mattress Review</a></li>
+    <li><strong>U.S. News &amp; World Report</strong> — <a href="https://www.usnews.com/360-reviews/sleep/mattress/saatva">Saatva Mattress Review 2026</a></li>
+    <li><strong>Amerisleep</strong> — <a href="https://amerisleep.com/blog/how-to-attach-a-headboard-to-an-adjustable-frame/">How to Attach a Headboard to an Adjustable Frame</a></li>
+    <li><strong>GhostBed</strong> — <a href="https://www.ghostbed.com/pages/choosing-an-adjustable-base-headboard">How to Use a Headboard with an Adjustable Base</a></li>
+    <li><strong>Ergomotion</strong> — <a href="https://shop.ergomotion.com/blogs/ergomotion-blog/how-to-use-a-headboard-with-an-adjustable-bed">How to Use a Headboard with an Adjustable Bed</a></li>
+    <li><strong>QuickZip</strong> — <a href="https://quickzip.com/products/flex-top-king-fitted-sheet">Flex-Top King Fitted Sheet</a></li>
+    <li><strong>Hardtofindsheets.com</strong> — <a href="https://www.hardtofindsheets.com/categories/shop-hard-to-find-sizes/split-head-cal-king-split-at-top-.html">Split Head Cal King sheets</a></li>
+    <li><strong>Wholesale Beddings</strong> — <a href="https://www.wholesalebeddings.com/blogs/new/our-blog-wholesale-bedding-split-top-flex-top-california-king-adjustable-bed-sheets">Flex-Top vs Split-Top California King Bedding Guide</a></li>
+    <li><strong>Quahog Bay Bedding</strong> — <a href="https://quahogbaybedding.com/collections/adjustable-bed-sheets/split-flex-top-king">Split Flex-Top King Sheets</a></li>
+    <li><strong>DreamFit / Natural Linens</strong> — <a href="https://naturallinens.com/products/dreamfit-degree-3-300-tc-select-pima-cotton-split-head-sheet-set">DreamFit Pima Cotton Split-Head sheets</a></li>
+    <li><strong>BedTech</strong> — <a href="https://www.bedtech.com/blogs/news/20240708-article">Headboard with Adjustable Bed</a></li>
+    <li><strong>Living Spaces</strong> — <a href="https://www.livingspaces.com/departments/mattresses/tempur-pedic-california-king-split-p136555-a32~754-a50~1157">Tempur-Pedic Split Cal King mattresses</a></li>
+    <li><strong>Amazon</strong> — <a href="https://www.amazon.com/Tempur-Pedic-TEMPUR-ProAdapt-Mattress-California-Warranty/dp/B07DDZB5SF">Tempur ProAdapt 12" Split Cal King</a></li>
+  </ul>
+
+  <p class="footer-note">
+    This report was compiled by Claude (an AI assistant by Anthropic) on April 30, 2026, using publicly available information from the sources cited above. Prices, availability, and product specifications can change frequently — always verify directly with the retailer before purchasing. This report is intended for personal, non-commercial use by John Gaskins and reflects general guidance, not personalized medical or financial advice.
+  </p>
+
+</div>
+</body>
+</html>
